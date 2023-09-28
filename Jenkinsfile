@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh 'systemctl apache status'
+        sh 'systemctl status apache'
         echo 'Servicio apache instalado'
       }
     }
