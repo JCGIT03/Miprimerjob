@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh 'sudo apt-get install apache'
+        sh 'sudo -S admin apt-get install apache'
         echo 'Servicio apache instalado'
       }
     }
 
     stage('stop') {
       steps {
-        sh 'sudo systemctl stop apache'
+        sh 'sudo -S admin systemctl stop apache'
         echo 'Servicio apache parado'
       }
     }
