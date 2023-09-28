@@ -3,11 +3,7 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh '''sudo -S  apt-get install apache /
-
-
-
-admin'''
+        sh 'systemctl apache status'
         echo 'Servicio apache instalado'
       }
     }
