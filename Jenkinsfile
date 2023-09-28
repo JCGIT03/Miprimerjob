@@ -3,15 +3,28 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh 'systemctl status apache'
-        echo 'Servicio apache instalado'
+        sh '''pwd
+'''
+        echo 'Comprobaciones realizadas'
+        sh 'ls'
       }
     }
 
     stage('stop') {
       steps {
-        sh 'sudo -S admin systemctl stop apache'
-        echo 'Servicio apache parado'
+        sh 'echo "building"'
+      }
+    }
+
+    stage('Unit test') {
+      steps {
+        sh 'echo "testing"'
+      }
+    }
+
+    stage('Deploy to dev') {
+      steps {
+        sh 'echo "sonar"'
       }
     }
 
